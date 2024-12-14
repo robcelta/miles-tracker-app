@@ -1,23 +1,17 @@
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 
-type ImageProps = {
-  src: string;
-  alt?: string;
-};
-
 type Props = {
   heading: string;
   description: string;
   buttons: ButtonProps[];
-  image: ImageProps;
 };
 
 export type Header1Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const HeroSection = (props: Header1Props) => {
-  const { heading, description, buttons, image } = {
+  const { heading, description, buttons } = {
     ...Header1Defaults,
     ...props,
   };
@@ -38,13 +32,7 @@ export const HeroSection = (props: Header1Props) => {
               ))}
             </div>
           </div>
-          <div>
-            <img
-              src={image.src}
-              className="w-full object-cover"
-              alt={image.alt}
-            />
-          </div>
+          <div></div>
         </div>
       </div>
     </section>
@@ -56,8 +44,4 @@ export const Header1Defaults: Props = {
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
   buttons: [{ title: "Button" }, { title: "Button", variant: "secondary" }],
-  image: {
-    src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-    alt: "Relume placeholder image",
-  },
 };

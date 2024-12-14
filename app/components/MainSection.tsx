@@ -29,13 +29,7 @@ export const MainSection = (props: Layout233Props) => {
         <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12">
           {sections.map((section, index) => (
             <div key={index}>
-              <div className="rb-5 mb-5 md:mb-6">
-                <img
-                  src={section.icon.src}
-                  className="size-12"
-                  alt={section.icon.alt}
-                />
-              </div>
+              <div className="rb-5 mb-5 md:mb-6"></div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
                 {section.heading}
               </h3>

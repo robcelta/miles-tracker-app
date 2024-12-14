@@ -76,9 +76,7 @@ export const Navbar = (props: Navbar3Props) => {
           <a
             href={logo.url}
             className="mb-8 mt-10 flex flex-shrink-0 lg:hidden"
-          >
-            <img src={logo.src} alt={logo.alt} />
-          </a>
+          ></a>
           {navLinks.map((navLink, index) => (
             <div key={index} className="w-full lg:w-auto">
               {navLink.subMenuLinks && navLink.subMenuLinks.length > 0 ? (
@@ -112,9 +110,10 @@ export const Navbar = (props: Navbar3Props) => {
           />
         )}
       </AnimatePresence>
-      <a href={logo.url} className="flex min-h-16 flex-shrink-0 items-center">
-        <img src={logo.src} alt={logo.alt} />
-      </a>
+      <a
+        href={logo.url}
+        className="flex min-h-16 flex-shrink-0 items-center"
+      ></a>
       <div className="flex min-h-16 items-center justify-end gap-x-4">
         <div>
           {buttons.map((button, index) => (
